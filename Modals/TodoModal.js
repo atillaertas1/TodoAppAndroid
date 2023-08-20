@@ -8,9 +8,9 @@ import {
   KeyboardAvoidingView,
   TextInput,
 } from "react-native";
-import styles from "./Styles";
+import styles from "../styles/Styles";
 import { AntDesign, Ionicons } from "@expo/vector-icons";
-import colors from "./Colors";
+import colors from "../styles/Colors";
 import { useEffect } from "react";
 
 export default function TodoModal({ list, closeModal, updateList }) {
@@ -128,7 +128,7 @@ export default function TodoModal({ list, closeModal, updateList }) {
           <FlatList
             data={todos}
             keyExtractor={todos.title}
-            renderItem={({ item, index }) => renderTodo({ item, index })} // renderItem içinde renderTodo fonksiyonunu çağırıyoruz ve item ile index'i iletiyoruz
+            renderItem={({ item, index }) => renderTodo({ item, index })}
             contentContainerStyle={{ paddingHorizontal: 64, paddingTop: 30 }}
             showsVerticalScrollIndicator={false}
           ></FlatList>

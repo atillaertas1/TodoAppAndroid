@@ -1,9 +1,8 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import { React, useState } from "react";
-import styles from "./Styles";
+import styles from "../styles/Styles";
 import { Modal } from "react-native";
-import TodoModal from "./TodoModal";
-import { AntDesign } from "@expo/vector-icons";
+import TodoModal from "../Modals/TodoModal";
 
 export default TodoList = ({ list, updateList }) => {
   const completedCount = list.todos.filter((todo) => todo.completed).length;
